@@ -22,6 +22,7 @@ public class RecyclopediaProvider extends ContentProvider {
     public Cursor query(Uri uri, String[] strings, String s, String[] strings1, String s1) {
         return null;
     }
+    
 
     @Nullable
     @Override
