@@ -54,6 +54,10 @@ public class Game {
         return game_itemtype;
     }
 
+    public String getGameDetails() {
+        return game_details;
+    }
+
     public String getGameImage() {
         return game_image;
     }
