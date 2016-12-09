@@ -90,8 +90,8 @@
       <file leaf-file-name="game_activity.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/game_activity.xml">
           <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.5">
-              <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+            <state vertical-scroll-proportion="-13.846154">
+              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
               <folding>
                 <element signature="e#456#481#0" expanded="true" />
                 <element signature="e#926#952#0" expanded="true" />
@@ -2428,8 +2428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/game_activity.xml">
       <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.5">
-          <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+        <state vertical-scroll-proportion="-13.846154">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
           <folding>
             <element signature="e#456#481#0" expanded="true" />
             <element signature="e#926#952#0" expanded="true" />

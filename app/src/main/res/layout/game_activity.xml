@@ -49,11 +49,17 @@
         android:layout_height="200dp"
         android:id="@+id/imageView"
         android:src="@drawable/sample_pic"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignStart="@+id/button1"
         android:layout_above="@+id/button1"
-        android:layout_alignRight="@+id/button1"
-        android:layout_alignEnd="@+id/button1" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scoreView"
+        android:text="9"
+        android:layout_above="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
 
 </RelativeLayout>
