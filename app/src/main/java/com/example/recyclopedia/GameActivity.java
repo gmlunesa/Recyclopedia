@@ -51,7 +51,7 @@ public class GameActivity extends Activity {
 
         //setQuestion();
         gameList = MainActivity.getGameList();
-        rand = 0 + (int)(Math.random() * ((2 - 0) + 1));
+        rand = 0 + (int)(Math.random() * ((11 - 0) + 1));
 
         Intent intent = getIntent();
         score = intent.getIntExtra("score", 0);
@@ -71,6 +71,7 @@ public class GameActivity extends Activity {
         ///// end of setting the question page
 
         ++counter;
+        Log.d("counter", ": " + counter);
 
         // Biodegradable button
         bio_button.setOnClickListener(new View.OnClickListener() {

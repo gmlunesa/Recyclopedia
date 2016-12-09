@@ -54,18 +54,32 @@ public class CheckActivity extends Activity {
         img_imageview.setImageResource(resID);
         //img_imageview
 
+        if (counter == 5) {
+            continue_button.setOnClickListener(new View.OnClickListener() {
 
-        continue_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent in = new Intent(getApplicationContext(), GameOverActivity.class);
 
-            @Override
-            public void onClick(View v) {
-                Intent in = new Intent(getApplicationContext(), GameActivity.class);
-                in.putExtra("counter", counter);
-                in.putExtra("score", score);
-                in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(in);
-            }
-        });
+                    in.putExtra("score", score);
+                    in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(in);
+                }
+            });
+        } else {
+            continue_button.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    Intent in = new Intent(getApplicationContext(), GameActivity.class);
+                    in.putExtra("counter", counter);
+                    in.putExtra("score", score);
+                    in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(in);
+                }
+            });
+        }
+
 
     }
 
