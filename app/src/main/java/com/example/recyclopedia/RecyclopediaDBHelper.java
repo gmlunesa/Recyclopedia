@@ -43,7 +43,7 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         db.execSQL(CREATE_PRODUCT_TABLE);
         db.execSQL(CREATE_GAME_TABLE);
 
-        initGameTable();
+        initGameTable(); // Populate the table.
         db.close();
 
     }
