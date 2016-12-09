@@ -32,7 +32,7 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
                 RecyclopediaEntry.PRODUCT_COLUMN_TYPE + " TEXT," + RecyclopediaEntry.PRODUCT_COLUMN_SUGGESTIONS + " TEXT)";
 
         String CREATE_GAME_TABLE = "CREATE TABLE " + RecyclopediaEntry.GAME_TABLE + "(" + RecyclopediaEntry.GAME_COLUMN_ID +
-                " INTEGER PRIMARY KEY AUTOINCREMENT," + RecyclopediaEntry.GAME_COLUMN_ITEM + " TEXT," +
+                " INTEGER PRIMARY KEY," + RecyclopediaEntry.GAME_COLUMN_ITEM + " TEXT," +
                 RecyclopediaEntry.GAME_COLUMN_ITEMTYPE + " INTEGER,"+ RecyclopediaEntry.GAME_COLUMN_DETAILS + " TEXT," + RecyclopediaEntry.GAME_COLUMN_IMAGE + " TEXT)";
 
         //Execute the sql statements and create the database
@@ -55,8 +55,16 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
     }
 
 
+    public void initGameTable() {
+        Game g1 = new Game(1, "Plastic bottle", 2, "details here", "getdrawable.image");
+        addQuestion(g1);
+        Game g2 = new Game(2, "Plastic bottle", 2, "details here", "getdrawable.image");
+        addQuestion(g2);
+
+    }
+
     // insert one question
-    
+
     public void addQuestion (Game entry) {
 
         //retrieve the database
@@ -65,6 +73,7 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         //get content values
         ContentValues values = new ContentValues();
 
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, entry.getGameID());
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, entry.getGameItem());
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, entry.getGameItemType());
         values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, entry.getGameDetails());

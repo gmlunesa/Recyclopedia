@@ -6,7 +6,7 @@ package com.example.recyclopedia;
 public class Game {
     private int game_id;
     private String game_item;
-    private String game_itemtype;
+    private int game_itemtype;
     private String game_details;
     private String game_image;
 
@@ -14,7 +14,7 @@ public class Game {
 
     }
 
-    public Game(int game_id, String game_item, String game_itemtype, String game_details, String game_image) {
+    public Game(int game_id, String game_item, int game_itemtype, String game_details, String game_image) {
         this.game_id = game_id;
         this.game_item = game_item;
         this.game_itemtype = game_itemtype;
@@ -30,7 +30,7 @@ public class Game {
         this.game_item = game_item;
     }
 
-    public void setGameItemType (String game_itemtype) {
+    public void setGameItemType (int game_itemtype) {
         this.game_itemtype = game_itemtype;
     }
 
@@ -50,7 +50,7 @@ public class Game {
         return game_item;
     }
 
-    public String getGameItemType() {
+    public int getGameItemType() {
         return game_itemtype;
     }
 
