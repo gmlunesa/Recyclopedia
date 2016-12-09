@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static RecyclopediaDBHelper dbHelper;
 
+    public static ArrayList<Game> gameList = new ArrayList<Game>();
+
     Button startGame;
     int score = 0;
     int counter = 3;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         dbHelper = new RecyclopediaDBHelper(this, RecyclopediaEntry.DBNAME, 1);
+        gameList = dbHelper.getAllQuestions();
 
         startGame = (Button) findViewById(R.id.game_button);
         startGame.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
+    public static ArrayList<Game> getGameList () {
+        return gameList;
+    }
 
     @Override
     public void onStart() {

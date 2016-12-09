@@ -22,6 +22,10 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         super(context, DATABASE_NAME, null, DATABASE_VERSION); // incremented database version from 2 to 3
     }
 
+    public RecyclopediaDBHelper(Context context) {
+        super(context, RecyclopediaEntry.DBNAME, null, DATABASE_VERSION);
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
 
@@ -43,8 +47,32 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         db.execSQL(CREATE_PRODUCT_TABLE);
         db.execSQL(CREATE_GAME_TABLE);
 
-        initGameTable(); // Populate the table.
-        db.close();
+        //initGameTable(); // Populate the table.
+
+        ContentValues values = new ContentValues();
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 1);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "plastic bottle");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "plastic pottles are really nice");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "sample");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 2);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "paper bag");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "paper bags more like paper bads");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "sample");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 3);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "banana leaf");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 1);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "I know you miss bananas");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "sample");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        //db.close();
 
     }
 
@@ -58,7 +86,6 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
 
         // Creating tables again
         onCreate(db);
-        initGameTable();
         db.close();
     }
 
