@@ -91,11 +91,11 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/game_activity.xml">
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="-14.5">
-              <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+              <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
               <folding>
                 <element signature="e#456#481#0" expanded="true" />
-                <element signature="e#884#910#0" expanded="true" />
-                <element signature="e#1321#1346#0" expanded="true" />
+                <element signature="e#926#952#0" expanded="true" />
+                <element signature="e#1366#1391#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2429,11 +2429,11 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/game_activity.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.5">
-          <caret line="51" column="47" selection-start-line="51" selection-start-column="47" selection-end-line="51" selection-end-column="47" />
+          <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
           <folding>
             <element signature="e#456#481#0" expanded="true" />
-            <element signature="e#884#910#0" expanded="true" />
-            <element signature="e#1321#1346#0" expanded="true" />
+            <element signature="e#926#952#0" expanded="true" />
+            <element signature="e#1366#1391#0" expanded="true" />
           </folding>
         </state>
       </provider>

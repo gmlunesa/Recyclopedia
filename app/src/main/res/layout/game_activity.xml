@@ -14,9 +14,10 @@
         android:id="@+id/button1"
         android:background="@color/gameButtonColor"
         android:textSize="25dp"
-        android:layout_centerVertical="true"
+        android:typeface="normal"
+        android:layout_above="@+id/button2"
         android:layout_centerHorizontal="true"
-        android:typeface="normal" />
+        android:layout_marginBottom="20dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -26,20 +27,20 @@
         android:id="@+id/button2"
         android:background="@color/gameButtonColor"
         android:textSize="25dp"
-        android:layout_marginTop="39dp"
-        android:layout_below="@+id/button1"
+        android:layout_above="@+id/button3"
         android:layout_alignLeft="@+id/button1"
-        android:layout_alignStart="@+id/button1" />
+        android:layout_alignStart="@+id/button1"
+        android:layout_marginBottom="20dp" />
 
     <Button
         android:layout_width="280dp"
         android:layout_height="56dp"
         android:text="@string/thirdButtonText"
         android:id="@+id/button3"
-        android:layout_marginTop="39dp"
         android:textSize="25dp"
         android:background="@color/gameButtonColor"
-        android:layout_below="@+id/button2"
+        android:layout_marginBottom="39dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/button2"
         android:layout_alignStart="@+id/button2" />
 
