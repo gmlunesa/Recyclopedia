@@ -2,9 +2,57 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/gameBackground"
+    android:weightSum="1">
 
-    >
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:text="@string/firstButtonText"
+        android:id="@+id/button1"
+        android:background="@color/gameButtonColor"
+        android:textSize="25dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:typeface="normal" />
 
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:text="@string/secondButtonText"
+        android:id="@+id/button2"
+        android:background="@color/gameButtonColor"
+        android:textSize="25dp"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignStart="@+id/button1" />
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="56dp"
+        android:text="@string/thirdButtonText"
+        android:id="@+id/button3"
+        android:layout_marginTop="39dp"
+        android:textSize="25dp"
+        android:background="@color/gameButtonColor"
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/sample_pic"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignStart="@+id/button1"
+        android:layout_above="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_alignEnd="@+id/button1" />
 
 </RelativeLayout>
