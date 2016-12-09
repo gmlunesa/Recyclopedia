@@ -89,8 +89,8 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
     }
 
     public ArrayList<Game> getAllQuestions () {
-        ArrayList<Game> gameList = new ArrayList<Game>();
 
+        ArrayList<Game> gameList = new ArrayList<Game>();
 
         String selectQuery = "SELECT * FROM " + RecyclopediaEntry.GAME_TABLE;
 
@@ -98,10 +98,26 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
 
         Cursor cursor = db.rawQuery(selectQuery, null);
 
+        if (cursor.moveToFirst()) {
 
+            do {
+
+                Game item = new Game();
+
+                item.setGameID(Integer.parseInt(cursor.getString(0)));
+                item.setGameItem(cursor.getString(1));
+                item.setGameItemType(Integer.parseInt(cursor.getString(2)));
+                item.setGameDetails(cursor.getString(3));
+                item.setGameImage(cursor.getString(4));
+
+                gameList.add(item);
+
+                // Adding contact to list
+
+            } while (cursor.moveToNext());
+
+        }
         return gameList;
-
     }
-
 
 }
