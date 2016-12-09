@@ -52,24 +52,88 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         ContentValues values = new ContentValues();
 
         values.put(RecyclopediaEntry.GAME_COLUMN_ID, 1);
-        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "plastic bottle");
-        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
-        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "plastic pottles are really nice");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Plastic bottle");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 3);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Plastic bottles are recyclable. They can be used as alternate pots for plants, jars for our homes, or even ith decorative purposes.");
         values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "sample");
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
 
         values.put(RecyclopediaEntry.GAME_COLUMN_ID, 2);
-        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "paper bag");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Styropor");
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
-        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "paper bags more like paper bads");
-        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "sample");
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Styropor, mostly used for food packaging, is non-biodegradable. We must refrain from using them, since it can clog up waterways, or worse, end up in the sea, where marine life might mistake them as food.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "ne");
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
 
         values.put(RecyclopediaEntry.GAME_COLUMN_ID, 3);
-        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "banana leaf");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Fruit and vegetable peelings");
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 1);
-        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "I know you miss bananas");
-        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "sample");
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Fruit and vegetable peelings are biodegradable. They are great for compost pits, which you can easily make in your backyard. The soil in compost pits is generally healthier.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 4);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Glass bottles");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 3);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Glass bottles are recyclable. Various junkyards even buy them.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 5);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Old TV");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Old TV can be called as 'e-waste'. They must be taken to a nearby waste treatment plants.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 6);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Left-over food");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 1);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Left over food is biodegradable.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 7);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Shampoo bottles");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 3);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Shampoo bottles maybe huge and bulky, but they can be used again with a refill.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 8);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Dead leaves on the backyard");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 1);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Fallen leaves are biodegredable. Very good for compost pits.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 9);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Batteries");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Batteries are non biodegradable, and at the same time very dangerous. You must go to a nearby waste treatment facility.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 10);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Disposable Diapers");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Disposable diapers are non-biodegradable. Make sure to dispose of it at the proper trash bins since it can clog toilets.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 11);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Drinking straw");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Although it is small and thin, these drinking straws make their way to the ocean where marine creatures are endangered because of them.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 12);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Package box");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Package boxes are recyclable. It can serve as a storage space, and they come in different sizes, you'll have one for your needs.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "nw");
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
 
         //db.close();
@@ -89,14 +153,6 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         db.close();
     }
 
-
-    public void initGameTable() {
-        Game g1 = new Game(1, "Plastic bottle", 2, "details here", "getdrawable.image");
-        addQuestion(g1);
-        Game g2 = new Game(2, "Paper bag", 1, "details here", "getdrawable.image");
-        addQuestion(g2);
-
-    }
 
     // insert one question
 

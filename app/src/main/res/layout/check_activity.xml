@@ -8,28 +8,39 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="CORRECT!"
         android:id="@+id/answerState"
-        android:layout_marginTop="55dp"
         android:textSize="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_above="@+id/checkedImage"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:id="@+id/checkedImage"
-        android:src="@drawable/sample_pic"
+        android:src="@drawable/nq"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew Text"
+        android:text="New TextNew TextNew TextNew TextNew TextNew TextNew TextNew"
         android:id="@+id/checkedDetails"
+        android:layout_marginTop="47dp"
         android:layout_below="@+id/checkedImage"
         android:layout_alignLeft="@+id/answerState"
         android:layout_alignStart="@+id/answerState"
-        android:layout_marginTop="43dp" />
+        android:layout_alignRight="@+id/answerState"
+        android:layout_alignEnd="@+id/answerState" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:id="@+id/cont"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp" />
 
 </RelativeLayout>
