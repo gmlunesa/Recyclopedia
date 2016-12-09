@@ -45,9 +45,11 @@
       <file leaf-file-name="RecyclopediaDBHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/recyclopedia/RecyclopediaDBHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25176057">
-              <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
-              <folding />
+            <state vertical-scroll-proportion="0.49823943">
+              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+              <folding>
+                <element signature="e#3678#3684#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2435,9 +2437,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/recyclopedia/RecyclopediaDBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25176057">
-          <caret line="60" column="64" selection-start-line="60" selection-start-column="64" selection-end-line="60" selection-end-column="64" />
-          <folding />
+        <state vertical-scroll-proportion="0.49823943">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding>
+            <element signature="e#3678#3684#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

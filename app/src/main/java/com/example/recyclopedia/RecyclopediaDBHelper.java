@@ -2,9 +2,12 @@ package com.example.recyclopedia;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.example.recyclopedia.RecyclopediaContract.RecyclopediaEntry;
+
+import java.util.ArrayList;
 
 /**
  * Created by Mariz on 12/6/2016.
@@ -52,13 +55,15 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
 
         // Creating tables again
         onCreate(db);
+        initGameTable();
+        db.close();
     }
 
 
     public void initGameTable() {
         Game g1 = new Game(1, "Plastic bottle", 2, "details here", "getdrawable.image");
         addQuestion(g1);
-        Game g2 = new Game(2, "Plastic bottle", 2, "details here", "getdrawable.image");
+        Game g2 = new Game(2, "Paper bag", 1, "details here", "getdrawable.image");
         addQuestion(g2);
 
     }
@@ -80,6 +85,21 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, entry.getGameImage());
 
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+    }
+
+    public ArrayList<Game> getAllQuestions () {
+        ArrayList<Game> gameList = new ArrayList<Game>();
+
+
+        String selectQuery = "SELECT * FROM " + RecyclopediaEntry.GAME_TABLE;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+
+        return gameList;
 
     }
 
