@@ -14,4 +14,22 @@
         android:layout_centerHorizontal="true"
         android:textStyle="bold" />
 
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/checkedImage"
+        android:src="@drawable/sample_pic"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew Text"
+        android:id="@+id/checkedDetails"
+        android:layout_below="@+id/checkedImage"
+        android:layout_alignLeft="@+id/answerState"
+        android:layout_alignStart="@+id/answerState"
+        android:layout_marginTop="43dp" />
+
 </RelativeLayout>
