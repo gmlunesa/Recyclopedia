@@ -1,5 +1,6 @@
 package com.example.recyclopedia;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -51,6 +52,26 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
 
         // Creating tables again
         onCreate(db);
+    }
+
+
+    // insert one question
+    
+    public void addQuestion (Game entry) {
+
+        //retrieve the database
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        //get content values
+        ContentValues values = new ContentValues();
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, entry.getGameItem());
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, entry.getGameItemType());
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, entry.getGameDetails());
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, entry.getGameImage());
+
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
     }
 
 

@@ -45,8 +45,8 @@
       <file leaf-file-name="RecyclopediaDBHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/recyclopedia/RecyclopediaDBHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77816904">
-              <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.46126762">
+              <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -1827,8 +1827,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/game_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/recyclopedia/RecyclopediaContract.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/recyclopedia/RecyclopediaDBHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/recyclopedia/Game.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/recyclopedia/RecyclopediaDBHelper.java" />
       </list>
     </option>
   </component>
@@ -2005,7 +2005,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.21645446" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Basurerawrr_crud/Fragment" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Basurerawrr_ContentProv/Fragment" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -2435,8 +2435,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/recyclopedia/RecyclopediaDBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77816904">
-          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.46126762">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
           <folding />
         </state>
       </provider>
