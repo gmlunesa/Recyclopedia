@@ -61,6 +61,7 @@ public class RecyclopediaContract {
         public static final String GAME_COLUMN_ID = "game_id";  // this is auto increment
         public static final String GAME_COLUMN_ITEM = "game_item"; // this is the item the game will show
         public static final String GAME_COLUMN_ITEMTYPE = "game_itemtype"; // the type of the game item
+        public static final String GAME_COLUMN_DETAILS = "game_details"; // corresponding image for the item
         public static final String GAME_COLUMN_IMAGE = "game_image"; // corresponding image for the item
 
         /***/

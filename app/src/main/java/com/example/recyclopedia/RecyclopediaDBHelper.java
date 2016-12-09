@@ -32,7 +32,7 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
 
         String CREATE_GAME_TABLE = "CREATE TABLE " + RecyclopediaEntry.GAME_TABLE + "(" + RecyclopediaEntry.GAME_COLUMN_ID +
                 " INTEGER PRIMARY KEY AUTOINCREMENT," + RecyclopediaEntry.GAME_COLUMN_ITEM + " TEXT," +
-                RecyclopediaEntry.GAME_COLUMN_ITEMTYPE + " INTEGER,"+ RecyclopediaEntry.GAME_COLUMN_IMAGE + " TEXT)";
+                RecyclopediaEntry.GAME_COLUMN_ITEMTYPE + " INTEGER,"+ RecyclopediaEntry.GAME_COLUMN_DETAILS + " TEXT," + RecyclopediaEntry.GAME_COLUMN_IMAGE + " TEXT)";
 
         //Execute the sql statements and create the database
         db.execSQL(CREATE_TOPIC_TABLE);
