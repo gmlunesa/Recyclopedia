@@ -43,7 +43,7 @@ public class CheckActivity extends Activity {
             answer_textview.setText("CORRECT");
             ++score;
         } else {
-            answer_textview.setText(" WRONG ");
+            answer_textview.setText(" OOPS! ");
         }
 
         details_textview.setText(in.getStringExtra("details"));

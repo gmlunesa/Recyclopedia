@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:text="New TextNew TextNew TextNew TextNew TextNew TextNew TextNew"
         android:id="@+id/checkedDetails"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@+id/checkedImage"
         android:layout_alignLeft="@+id/answerState"
         android:layout_alignStart="@+id/answerState"
@@ -41,6 +41,7 @@
         android:id="@+id/cont"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="15dp" />
+        android:layout_marginBottom="15dp"
+        android:background="@color/gameButtonColor"/>
 
 </RelativeLayout>
