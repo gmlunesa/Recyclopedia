@@ -47,7 +47,7 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         db.execSQL(CREATE_PRODUCT_TABLE);
         db.execSQL(CREATE_GAME_TABLE);
 
-        //initGameTable(); // Populate the table.
+        // Populate the game table.
 
         ContentValues values = new ContentValues();
 
@@ -154,25 +154,6 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
     }
 
 
-    // insert one question
-
-    public void addQuestion (Game entry) {
-
-        //retrieve the database
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        //get content values
-        ContentValues values = new ContentValues();
-
-        values.put(RecyclopediaEntry.GAME_COLUMN_ID, entry.getGameID());
-        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, entry.getGameItem());
-        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, entry.getGameItemType());
-        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, entry.getGameDetails());
-        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, entry.getGameImage());
-
-        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
-
-    }
 
     public ArrayList<Game> getAllQuestions () {
 
