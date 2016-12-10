@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.example.recyclopedia.RecyclopediaContract.RecyclopediaEntry;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by Mariz on 12/6/2016.
@@ -134,6 +136,19 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 3);
         values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Package boxes are recyclable. It can serve as a storage space, and they come in different sizes, you'll have one for your needs.");
         values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "l");
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 13);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Human Remains");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 1);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "The human bod decomposes over time. Some wax them to preserve them.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "marcos");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 14);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Sanitary Napkin");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 1);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "You should always be careful not to flush them in the toilet. They clog them.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "napkin");
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
 
         //db.close();
@@ -205,5 +220,86 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         }
         return gameList;
     }
+    public void addTopic(String title, String details, String subject) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(RecyclopediaEntry.TOPIC_COLUMN_TITLE, title);
+        values.put(RecyclopediaEntry.TOPIC_COLUMN_DETAILS, details);
+        values.put(RecyclopediaEntry.TOPIC_COLUMN_SUBJECT, subject);
+        db.insert(RecyclopediaEntry.TOPIC_TABLE, null,values);
+        db.close();
+    }
 
+    public ArrayList<String> getListSubjects() {
+
+        ArrayList<String> subjects = new ArrayList<String>();
+
+        // Select All Query
+
+        String selectQuery = "SELECT DISTINCT " + RecyclopediaEntry.TOPIC_COLUMN_SUBJECT+ " FROM " + RecyclopediaEntry.TOPIC_TABLE;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+
+
+        // looping through all rows and adding to list
+
+        if (cursor.moveToFirst()) {
+
+            do {
+                // System.out.println(cursor.getString(0));
+                subjects.add(cursor.getString(0));
+                // Adding contact to list
+            } while (cursor.moveToNext());
+
+        }
+
+        // return contact list
+        db.close();
+        return subjects;
+
+    }
+    public String getDetails(String selected) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String selectQuery = "SELECT " +  RecyclopediaEntry.TOPIC_COLUMN_DETAILS + " FROM " + RecyclopediaEntry.TOPIC_TABLE + " WHERE " + RecyclopediaEntry.TOPIC_COLUMN_TITLE +" = " + "'" + selected + "'";
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        String retDetail = "";
+        if (cursor.moveToFirst()) {
+            retDetail = cursor.getString(0);
+        }
+
+        return retDetail;
+    }
+    public HashMap<String,List<String>> getHashMapTopics() {
+
+        ArrayList<String> topics = getListSubjects();
+        ArrayList<String> childList;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor;
+        HashMap<String, List<String>> hashMapTopics = new HashMap<>();
+        String selectQuery;
+        // Select All Query
+        System.out.println(topics.size());
+        System.out.println(topics.toString());
+        int ctr = 0;
+        for (String subj : topics) {
+            childList = new ArrayList<String>();
+            selectQuery = "SELECT * FROM " + RecyclopediaEntry.TOPIC_TABLE + " WHERE " + RecyclopediaEntry.TOPIC_COLUMN_SUBJECT + " = " + "'" + subj + "'";
+            cursor = db.rawQuery(selectQuery, null);
+            ctr = 0;
+            if (cursor.moveToFirst()) {
+                do {
+                    System.out.println(ctr++);
+                    childList.add(cursor.getString(1));
+                } while (cursor.moveToNext());
+            }
+            hashMapTopics.put(subj, childList);
+        }
+
+        // return contact list
+        db.close();
+        return hashMapTopics;
+    }
 }

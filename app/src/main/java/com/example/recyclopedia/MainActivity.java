@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     public static ArrayList<Game> gameList = new ArrayList<Game>();
 
     Button startGame;
+    Button calendar;
+    Button expanded;
     int score = 0;
     int counter = 3;
     /**
@@ -52,6 +54,23 @@ public class MainActivity extends AppCompatActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        calendar = (Button) findViewById((R.id.cal_button));
+        calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), GarbageCollection.class);
+                startActivity(in);
+            }
+        });
+        expanded = (Button) findViewById(R.id.rec_button);
+        expanded.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(getApplicationContext(), ExpandedListActivity.class);
+                startActivity(in);
+            }
+        });
+
     }
 
     public static ArrayList<Game> getGameList () {
@@ -97,4 +116,6 @@ public class MainActivity extends AppCompatActivity {
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
-}
+
+
+    }
