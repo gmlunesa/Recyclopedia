@@ -29,12 +29,14 @@ public class CheckActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.check_activity);
 
+        // assign the different views
         answer_textview = (TextView) findViewById(R.id.answerState);
         details_textview = (TextView) findViewById(R.id.checkedDetails);
         img_imageview = (ImageView) findViewById(R.id.checkedImage);
 
         continue_button = (Button) findViewById(R.id.cont);
 
+            //get the information from the previous activity
         Intent in = getIntent();
         score = (in.getIntExtra("score", 0));
         counter = in.getIntExtra("counter", 0);
@@ -48,12 +50,13 @@ public class CheckActivity extends Activity {
 
         details_textview.setText(in.getStringExtra("details"));
 
+        //print the image, using the file name which is stored in the database
         Resources res = getResources();
         String img_name = in.getStringExtra("img");
         int resID = res.getIdentifier(img_name , "drawable", getPackageName());
         img_imageview.setImageResource(resID);
-        //img_imageview
 
+        // if counter is 5, that means the game is done.
         if (counter == 5) {
             continue_button.setOnClickListener(new View.OnClickListener() {
 

@@ -12,9 +12,26 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Mini-Game"
         android:id="@+id/game_button"
-        android:layout_marginTop="116dp"
-        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Garbage Calendar"
+        android:id="@+id/cal_button"
+        android:layout_marginTop="57dp"
+        android:layout_below="@+id/game_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recyclopedia"
+        android:id="@+id/rec_button"
+        android:layout_above="@+id/game_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp" />
 </RelativeLayout>
