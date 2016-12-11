@@ -13,6 +13,8 @@ public class DetailsActivity extends Activity {
     int groupPos;
     int childPos;
     String detail;
+
+    // initialize the TextView
     TextView det;
 
     @Override
@@ -20,11 +22,12 @@ public class DetailsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_layout);
         Intent intent = getIntent();
+        // gets the variables from the topic object selected, sent by the previous activity, and assign them to variables
         groupPos = intent.getIntExtra("listPos",0);
         childPos = intent.getIntExtra("childPos", 0);
         detail = intent.getStringExtra("notes");
         det = (TextView)findViewById(R.id.textView);
-        det.setText(detail);
+        det.setText(detail);    // prints the topic details
     }
 
 }
