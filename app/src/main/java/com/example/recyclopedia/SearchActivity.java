@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+// unfinished work
 /**
  * Created by Mariz on 12/10/2016.
  */
@@ -17,7 +18,7 @@ public class SearchActivity extends Activity {
     Button search_button;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.game_activity);
+        setContentView(R.layout.search_activity);
 
         search_editText = (EditText) findViewById(R.id.search_editText);
         search_button = (Button) findViewById(R.id.search_button);
