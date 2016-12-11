@@ -36,7 +36,13 @@ public class ExpandedListActivity extends Activity {
             });
 
             dbHelper = new RecyclopediaDBHelper(this);
-            populateData();
+            // if this activity hasn't opened yet ever, then populate the hashmap in the database
+
+            if (MainActivity.expandOpened == 0) {
+                populateData();
+                ++MainActivity.expandOpened;
+            }
+
             explistView = (ExpandableListView) findViewById(R.id.exp_list);
             //System.out.print("yeah " + dbHelper.getAllTopics());
             explistAdapter = new EncyclopediaAdapter(this, dbHelper.getHashMapTopics(), dbHelper.getListSubjects());

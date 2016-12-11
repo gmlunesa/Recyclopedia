@@ -31,15 +31,17 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        // SQL Statements
+        // SQL Statements --  this is for the topics about segregation
         String CREATE_TOPIC_TABLE = "CREATE TABLE " + RecyclopediaEntry.TOPIC_TABLE + "(" + RecyclopediaEntry.TOPIC_COLUMN_ID +
                 " INTEGER PRIMARY KEY AUTOINCREMENT," + RecyclopediaEntry.TOPIC_COLUMN_TITLE + " TEXT," +
                 RecyclopediaEntry.TOPIC_COLUMN_DETAILS + " TEXT," + RecyclopediaEntry.TOPIC_COLUMN_SUBJECT + " TEXT)";
 
+        // this is an unused table, this was supposed to be for the search feature
         String CREATE_PRODUCT_TABLE = "CREATE TABLE " + RecyclopediaEntry.PRODUCT_TABLE + "(" + RecyclopediaEntry.PRODUCT_COLUMN_ID +
                 " INTEGER PRIMARY KEY AUTOINCREMENT," + RecyclopediaEntry.PRODUCT_COLUMN_NAME + " TEXT," +
                 RecyclopediaEntry.PRODUCT_COLUMN_TYPE + " TEXT," + RecyclopediaEntry.PRODUCT_COLUMN_SUGGESTIONS + " TEXT)";
 
+        // the table for the game
         String CREATE_GAME_TABLE = "CREATE TABLE " + RecyclopediaEntry.GAME_TABLE + "(" + RecyclopediaEntry.GAME_COLUMN_ID +
                 " INTEGER PRIMARY KEY," + RecyclopediaEntry.GAME_COLUMN_ITEM + " TEXT," +
                 RecyclopediaEntry.GAME_COLUMN_ITEMTYPE + " INTEGER,"+ RecyclopediaEntry.GAME_COLUMN_DETAILS + " TEXT," + RecyclopediaEntry.GAME_COLUMN_IMAGE + " TEXT)";
@@ -146,7 +148,7 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
 
         values.put(RecyclopediaEntry.GAME_COLUMN_ID, 14);
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Sanitary Napkin");
-        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 1);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
         values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "You should always be careful not to flush them in the toilet. They clog them.");
         values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "napkin");
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
@@ -170,6 +172,7 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
 
 
 
+    // this method returns all the questions stored in the database
     public ArrayList<Game> getAllQuestions () {
 
         ArrayList<Game> gameList = new ArrayList<Game>();
@@ -180,18 +183,22 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
 
         Cursor cursor = db.rawQuery(selectQuery, null);
 
+        // parse the returned data from the database
         if (cursor.moveToFirst()) {
 
             do {
 
+                // make a new game object
                 Game item = new Game();
 
+                // store the details from the DB to the object
                 item.setGameID(Integer.parseInt(cursor.getString(0)));
                 item.setGameItem(cursor.getString(1));
                 item.setGameItemType(Integer.parseInt(cursor.getString(2)));
                 item.setGameDetails(cursor.getString(3));
                 item.setGameImage(cursor.getString(4));
 
+                // add the object to the arraylist that will be returned by this function
                 gameList.add(item);
 
                 // Adding contact to list
@@ -201,6 +208,8 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         }
         return gameList;
     }
+
+    // this method adds a row in the topic table
     public void addTopic(String title, String details, String subject) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -211,12 +220,12 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         db.close();
     }
 
+    // this is a method to retrieve all the subjects, and return an arrayList
     public ArrayList<String> getListSubjects() {
 
         ArrayList<String> subjects = new ArrayList<String>();
 
-        // Select All Query
-
+        // the query to the database
         String selectQuery = "SELECT DISTINCT " + RecyclopediaEntry.TOPIC_COLUMN_SUBJECT+ " FROM " + RecyclopediaEntry.TOPIC_TABLE;
 
         SQLiteDatabase db = this.getReadableDatabase();
@@ -224,15 +233,13 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         Cursor cursor = db.rawQuery(selectQuery, null);
 
 
-
         // looping through all rows and adding to list
-
         if (cursor.moveToFirst()) {
 
             do {
-                // System.out.println(cursor.getString(0));
+                // add data to the arraylist that will be returned by this function
                 subjects.add(cursor.getString(0));
-                // Adding contact to list
+
             } while (cursor.moveToNext());
 
         }
@@ -242,40 +249,54 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         return subjects;
 
     }
+
+    // this will return the details based on a particular topic selected by the user, through String selected
     public String getDetails(String selected) {
         SQLiteDatabase db = this.getReadableDatabase();
+
+        // the query
         String selectQuery = "SELECT " +  RecyclopediaEntry.TOPIC_COLUMN_DETAILS + " FROM " + RecyclopediaEntry.TOPIC_TABLE + " WHERE " + RecyclopediaEntry.TOPIC_COLUMN_TITLE +" = " + "'" + selected + "'";
         Cursor cursor = db.rawQuery(selectQuery, null);
         String retDetail = "";
+
+        // get the resulting data and return it
         if (cursor.moveToFirst()) {
             retDetail = cursor.getString(0);
         }
 
         return retDetail;
     }
+
+    // this method retrieves all the topic items in the database, make a hashmap out of the data, and returns the hashmap
     public HashMap<String,List<String>> getHashMapTopics() {
 
-        ArrayList<String> topics = getListSubjects();
+        ArrayList<String> topics = getListSubjects(); // we get the list of the subjects/topics
+
         ArrayList<String> childList;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor;
         HashMap<String, List<String>> hashMapTopics = new HashMap<>();
         String selectQuery;
-        // Select All Query
+
         System.out.println(topics.size());
         System.out.println(topics.toString());
         int ctr = 0;
+
+        // this loop will retrieve all the topic items, and store them in a hashmap which is arranged and categorized based on its topic
         for (String subj : topics) {
             childList = new ArrayList<String>();
+            // the select query, we will select all the articles under a particular topic
             selectQuery = "SELECT * FROM " + RecyclopediaEntry.TOPIC_TABLE + " WHERE " + RecyclopediaEntry.TOPIC_COLUMN_SUBJECT + " = " + "'" + subj + "'";
             cursor = db.rawQuery(selectQuery, null);
             ctr = 0;
+            // parse the returned data, and add them to an Array List
             if (cursor.moveToFirst()) {
                 do {
                     System.out.println(ctr++);
                     childList.add(cursor.getString(1));
                 } while (cursor.moveToNext());
             }
+            // store the list in the HashMap, as well as the topic/subject
             hashMapTopics.put(subj, childList);
         }
 

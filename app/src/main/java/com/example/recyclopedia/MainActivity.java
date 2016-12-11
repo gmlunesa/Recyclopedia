@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     Button calendar;
     Button expanded;
 
+    public static int expandOpened = 0;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.

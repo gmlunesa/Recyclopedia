@@ -17,6 +17,7 @@ public class GarbageCollection extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.garbage_main);
+
         //go to schedule button
         Button schedButton = (Button) findViewById(R.id.scheduleButton);
         schedButton.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +29,8 @@ public class GarbageCollection extends Activity {
                 startActivity(i);
             }
         });
+
+        // this button goes back to the home page
         Button backButton = (Button) findViewById(R.id.Backbutton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
