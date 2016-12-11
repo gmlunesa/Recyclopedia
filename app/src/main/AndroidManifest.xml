@@ -26,7 +26,12 @@
         <activity
             android:name=".GameOverActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"/>
-
+         <activity android:name=".ExpandedListActivity"/>
+        <activity android:name=".DetailsActivity"/>
+        <activity android:name=".AddingSchedActivity"
+            android:label="@string/app_name2">
+        </activity>
+        <activity android:name=".GarbageCollection"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

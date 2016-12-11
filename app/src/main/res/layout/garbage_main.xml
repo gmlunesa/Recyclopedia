@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.recyclopedia.GarbageCollection">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Non-biodegradable waste and residual waste will be collected every Tuesday, Thursday, and Sunday"
+        android:id="@+id/BioText"
+        android:textSize="20dp"
+        android:layout_below="@+id/imageView1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biodegradable waste will be collected every Monday, Wednesday, Friday, and Saturday"
+        android:id="@+id/nonBioText"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Schedule"
+        android:id="@+id/scheduleButton"
+        android:layout_below="@+id/BioText"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bio"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/textView2"
+        android:layout_alignRight="@+id/scheduleButton"
+        android:layout_alignEnd="@+id/scheduleButton" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nonbio"
+        android:id="@+id/imageView1"
+        android:layout_below="@+id/textView3"
+        android:layout_alignRight="@+id/scheduleButton"
+        android:layout_alignEnd="@+id/scheduleButton" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Biodegradable"
+        android:id="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textSize="20dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Non-Biodegradable"
+        android:id="@+id/textView3"
+        android:textAlignment="center"
+        android:layout_below="@+id/nonBioText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/nonBioText"
+        android:layout_alignEnd="@+id/nonBioText" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/Backbutton"
+        android:layout_below="@+id/scheduleButton"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

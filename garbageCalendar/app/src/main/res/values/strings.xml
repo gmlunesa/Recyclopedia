@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Garbage Truck Schedules</string>
+    <string name="set_schedule">Set Schedule</string>
+</resources>

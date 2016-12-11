@@ -7,6 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/gameBackground"
     tools:context="com.example.recyclopedia.MainActivity">
 
     <Button
@@ -14,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Mini-Game"
         android:id="@+id/game_button"
-        android:layout_centerVertical="true"
+        android:layout_above="@+id/cal_button"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -22,9 +23,10 @@
         android:layout_height="wrap_content"
         android:text="Garbage Calendar"
         android:id="@+id/cal_button"
-        android:layout_marginTop="57dp"
-        android:layout_below="@+id/game_button"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="83dp"
+       />
 
     <Button
         android:layout_width="wrap_content"
@@ -32,6 +34,15 @@
         android:text="Recyclopedia"
         android:id="@+id/rec_button"
         android:layout_above="@+id/game_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp" />
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/rec"
+        android:layout_above="@+id/rec_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp" />
 </RelativeLayout>

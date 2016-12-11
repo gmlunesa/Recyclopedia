@@ -3,7 +3,4 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="gameBackground">#F0F7DA</color>
-    <color name="gameButtonColor">#77ab59</color>
-    <color name ="teal">#009688</color>
 </resources>
