@@ -16,6 +16,7 @@ import android.widget.TextView;
  */
 public class CheckActivity extends Activity {
 
+    // initialize the UI objects
     TextView answer_textview;
     TextView details_textview;
     ImageView img_imageview;
@@ -36,18 +37,20 @@ public class CheckActivity extends Activity {
 
         continue_button = (Button) findViewById(R.id.cont);
 
-            //get the information from the previous activity
+        //get the information from the previous activity
         Intent in = getIntent();
-        score = (in.getIntExtra("score", 0));
-        counter = in.getIntExtra("counter", 0);
-        Log.d("user answer", ": " + in.getIntExtra("user_answer", 0));
+        score = (in.getIntExtra("score", 0));       // get the score
+        counter = in.getIntExtra("counter", 0);     // get the counter, which keeps track on how many times the player has played
+
+        // compare the user answer against the correct answer (defined by and retrieved from the Game object from our database)
         if (in.getIntExtra("user_answer", 0) == in.getIntExtra("real_answer", 0)) {
-            answer_textview.setText("CORRECT");
-            ++score;
+            answer_textview.setText("CORRECT"); // set the text
+            ++score;    // increment the score, since the user is correct
         } else {
             answer_textview.setText(" OOPS! ");
         }
 
+        // display the details of the particular product
         details_textview.setText(in.getStringExtra("details"));
 
         //print the image, using the file name which is stored in the database
@@ -62,9 +65,9 @@ public class CheckActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
-                    Intent in = new Intent(getApplicationContext(), GameOverActivity.class);
+                    Intent in = new Intent(getApplicationContext(), GameOverActivity.class); // start the Game Over activity
 
-                    in.putExtra("score", score);
+                    in.putExtra("score", score);       // pass the score, to be displayed by the Game Over activity
                     in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(in);
                 }
@@ -74,9 +77,9 @@ public class CheckActivity extends Activity {
 
                 @Override
                 public void onClick(View v) {
-                    Intent in = new Intent(getApplicationContext(), GameActivity.class);
-                    in.putExtra("counter", counter);
-                    in.putExtra("score", score);
+                    Intent in = new Intent(getApplicationContext(), GameActivity.class);    // if the user hasn't played 5 times yet, start another Game Activity class
+                    in.putExtra("counter", counter); // pass the counter
+                    in.putExtra("score", score);    // pass the score
                     in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(in);
                 }
