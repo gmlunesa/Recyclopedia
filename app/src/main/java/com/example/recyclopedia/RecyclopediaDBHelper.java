@@ -65,14 +65,14 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         values.put(RecyclopediaEntry.GAME_COLUMN_ID, 2);
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Styropor");
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
-        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Styropor, mostly used for food packaging, is non-biodegradable. We must refrain from using them, since it can clog up waterways, or worse, end up in the sea, where marine life might mistake them as food.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Styropor, mostly used for food packaging, is non-biodegradable. They clog waterways and harm marine life.");
         values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "b");
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
 
         values.put(RecyclopediaEntry.GAME_COLUMN_ID, 3);
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Fruit and vegetable peelings");
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 1);
-        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Fruit and vegetable peelings are biodegradable. They are great for compost pits, which you can easily make in your backyard. The soil in compost pits is generally healthier.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Fruit and vegetable peelings are biodegradable. They are great for compost pits.");
         values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "c");
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
 
