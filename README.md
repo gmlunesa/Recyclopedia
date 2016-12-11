@@ -1,11 +1,11 @@
 # Recyclopedia
-A *very* simple Android application that encourages people to reduce, reuse and recycle. For more extensive details, please check the wiki!
+A *very* simple Android application that encourages people to reduce, reuse and recycle. For more extensive details, please check the [wiki] (https://github.com/gmlunesa/Recyclopedia/wiki)!
 
 ---
 #Requirements
 
 ### Running the Recyclopedia app on phone
-* Android 4.1 (Jelly Bean) API Level 16 ([more information](https://developer.android.com/about/versions/android-4.1.html)) and up
+* Android 4.1 (Jelly Bean) [API Level 16] (https://developer.android.com/about/versions/android-4.1.html) and up
 
 ### Editing the Recyclopedia project
 * Android Studio
@@ -18,7 +18,7 @@ A *very* simple Android application that encourages people to reduce, reuse and 
 ---
 #Installation
 
-* If you wish to download the APK, please do so [here]()
+* If you wish to download the APK, please do so [here](https://drive.google.com/file/d/0B_-QDCq6fD-kSVlBTzlhWXJhSWs/view?usp=sharing)
 
 * If you wish to contribute to the project, you may clone this repository and open it with Android Studio.
 
