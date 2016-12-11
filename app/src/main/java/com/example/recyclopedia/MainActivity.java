@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button startGame;
     Button calendar;
     Button expanded;
-    int score = 0;
-    int counter = 3;
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -39,13 +38,14 @@ public class MainActivity extends AppCompatActivity {
         dbHelper = new RecyclopediaDBHelper(this, RecyclopediaEntry.DBNAME, 1);
         gameList = dbHelper.getAllQuestions();
 
+        // this button will start the mini game
         startGame = (Button) findViewById(R.id.game_button);
         startGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(getApplicationContext(), GameActivity.class);
-                in.putExtra("counter", 0);
-                in.putExtra("score", 0);
+                Intent in = new Intent(getApplicationContext(), GameActivity.class); // redirect to a game activity
+                in.putExtra("counter", 0);  // set the counter to zero since this is our first time playing the game
+                in.putExtra("score", 0);    // set the score to zero, too
                 in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(in);
             }
@@ -53,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
         });
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        // this button will staart a new activity to set a schedule for garbage collection
         calendar = (Button) findViewById((R.id.cal_button));
         calendar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(in);
             }
         });
+
+        // this button will start the activity to show the expandable lists of topics
         expanded = (Button) findViewById(R.id.rec_button);
         expanded.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static ArrayList<Game> getGameList () {
-        return gameList;
+        return gameList; // retrieve the list of games here in the database
+                        // I did this to prevent recursive calls to the database, as Android Studio called me out on that one.
     }
 
     @Override
