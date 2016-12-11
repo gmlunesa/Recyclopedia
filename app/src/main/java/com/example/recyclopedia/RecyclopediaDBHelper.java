@@ -142,15 +142,22 @@ public class RecyclopediaDBHelper extends SQLiteOpenHelper{
         values.put(RecyclopediaEntry.GAME_COLUMN_ID, 13);
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Human Remains");
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 1);
-        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "The human bod decomposes over time. Some wax them to preserve them.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Human remains are biodegradable. The human bod decomposes over time. Some wax them to preserve them.");
         values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "marcos");
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
 
         values.put(RecyclopediaEntry.GAME_COLUMN_ID, 14);
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Sanitary Napkin");
         values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 2);
-        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "You should always be careful not to flush them in the toilet. They clog them.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Sanitary napkins are non-biodegrable. You should always be careful not to flush them in the toilet. They clog them.");
         values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "napkin");
+        db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
+
+        values.put(RecyclopediaEntry.GAME_COLUMN_ID, 15);
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEM, "Toilet roll");
+        values.put(RecyclopediaEntry.GAME_COLUMN_ITEMTYPE, 3);
+        values.put(RecyclopediaEntry.GAME_COLUMN_DETAILS, "Toilet rolls are recyclable. They can be used for different kinds of cute crafts.");
+        values.put(RecyclopediaEntry.GAME_COLUMN_IMAGE, "toilet");
         db.insert(RecyclopediaEntry.GAME_TABLE, null, values);
 
         //db.close();
