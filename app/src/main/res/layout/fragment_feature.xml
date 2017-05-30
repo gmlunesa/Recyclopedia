@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/logoimage" />
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:id="@+id/search_button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/logo"/>
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:id="@+id/encyclopedia_button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/logo"/>
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:id="@+id/game_button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/logo"/>
+
+    <ImageButton
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:id="@+id/calendar_button"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/logo" />
+
+
+</LinearLayout>

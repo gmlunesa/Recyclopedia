@@ -1,0 +1,72 @@
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.recyclopedia.GameActivityFragment"
+    tools:showIn="@layout/activity_game">
+
+
+</RelativeLayout>-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:ignore="RtlHardcoded"
+    tools:context="com.example.recyclopedia.CheckActivityFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="@dimen/game_name_margin_top"
+            android:text="Freddie Mercury"/>
+
+        <ImageView
+            android:id="@+id/result_image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/game_image_size"
+            android:layout_marginBottom="@dimen/game_image_margin_vertical"
+            android:layout_marginTop="@dimen/game_image_margin_vertical"
+            android:adjustViewBounds="true"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:id="@+id/result_details"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="@dimen/game_description_margin_bottom"
+            android:layout_marginLeft="@dimen/game_description_margin_left"
+            android:layout_marginRight="@dimen/game_description_margin_right"
+            android:layout_marginTop="0dp"
+            android:autoLink="web"
+            android:text="Freddie Mercury Rage Pose is a rage comic character made from a photo of deceased British musician and former lead vocalist for the rock band Queen Freddie Mercury. The image is typically used to indicate that an extraordinary feat has been accomplished, similar to the F!@# Yea illustration."/>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="@string/cont"
+            android:id="@+id/result_button"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/buttonColor"/>
+
+    </LinearLayout>
+
+</ScrollView>

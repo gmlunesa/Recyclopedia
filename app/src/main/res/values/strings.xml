@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Recyclopedia</string>
+
+    <string name="applogo">AppLogo</string>
+    <string name="logoimage">logoImage</string>
+    <string name="logo">logo</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="bio">Biodegradable</string>
+    <string name="nonbio">Non-Biodegradable</string>
+    <string name="rec">Recyclable</string>
+
+    <string name="cont">Continue</string>
+    <string name="done">Done</string>
+
+    <string name="title_activity_game_over">Game Over</string>
+    <string name="title_activity_check">Game</string>
+    <string name="title_activity_game">Game</string>
+    <string name="title_activity_topic">Topics</string>
+    <string name="title_activity_search">Search</string>
+    <string name="title_activity_encyclopedia">Encyclopedia</string>
+    <string name="title_activity_details">Details</string>
+
+
+</resources>
