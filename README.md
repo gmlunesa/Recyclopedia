@@ -1,22 +1,22 @@
 # Recyclopedia
-A *very* simple Android application that encourages people to reduce, reuse and recycle. For more extensive details, please check the [wiki] (https://github.com/gmlunesa/Recyclopedia/wiki)!
+A *very* simple Android application that encourages people to reduce, reuse and recycle. For more extensive details, please check the [wiki](https://github.com/gmlunesa/Recyclopedia/wiki)!
 
 ---
-#Requirements
+# Requirements
 
 ### Running the Recyclopedia app on phone
-* Android 4.1 (Jelly Bean) [API Level 16] (https://developer.android.com/about/versions/android-4.1.html) and up
+* Android 4.1 (Jelly Bean) [API Level 16](https://developer.android.com/about/versions/android-4.1.html) and up
 
 ### Editing the Recyclopedia project
 * Android Studio
 * Microsoft Visual Studio
 * IntelliJ Idea
 * Eclipse (with ADT plugin)
-* More details [here] (http://alternativeto.net/software/android-studio/)
+* More details [here](http://alternativeto.net/software/android-studio/)
 
 
 ---
-#Installation
+# Installation
 
 * If you wish to download the APK, please do so [here](https://drive.google.com/file/d/0B_-QDCq6fD-kSVlBTzlhWXJhSWs/view?usp=sharing)
 
@@ -35,7 +35,7 @@ We have many plans in improving this simple project:
 * Release it in the Google Play Store!
 
 ---
-#License
+# License
 
 Copyright 2016 Goldy Mariz Lunesa
 
@@ -52,12 +52,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 ---
-#Project Collaborators
+# Project Collaborators
 
 You can reach us through our emails and Facebook accounts:
-* [Gulane, Cedez Marie] (https://www.facebook.com/cedezmarie.gulane) (cggulane@up.edu.ph)
-* [Lunesa, Goldy Mariz] (https://www.facebook.com/goldy.mariz) (gclunesa@up.edu.ph)
-* [Pacada, Alpha Marie] (https://www.facebook.com/alpha.BetaT.T) (arpacada@up.edu.ph)
+* [Gulane, Cedez Marie](https://www.facebook.com/cedezmarie.gulane) (cggulane@up.edu.ph)
+* [Lunesa, Goldy Mariz](https://www.facebook.com/goldy.mariz) (gclunesa@up.edu.ph)
+* [Pacada, Alpha Marie](https://www.facebook.com/alpha.BetaT.T) (arpacada@up.edu.ph)
 
 Supervisor:
 * Maraat, Dandeljane (djmaraat@gmail.com)
